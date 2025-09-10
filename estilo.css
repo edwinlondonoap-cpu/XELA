@@ -1,0 +1,143 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  background-color: #fffaf5;
+  color: #3a2e2e;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+  background: #f9f4f0;
+}
+
+.logo {
+  max-width: 180px;
+  height: auto;
+  margin: 0 auto 0.5rem;
+  display: block;
+}
+
+.slogan {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.8rem;
+  color: #7a5c4f;
+  margin-bottom: 2rem;
+}
+
+main {
+  flex-grow: 1;
+  padding: 0 1rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Galería */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.gallery figure {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.gallery figure:hover {
+  transform: scale(1.05);
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+figcaption {
+  padding: 0.75rem 0;
+  font-weight: 600;
+  color: #5a4335;
+}
+
+/* Testimonios */
+.testimonials {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-style: italic;
+  color: #6b5b4b;
+}
+
+.testimonials blockquote {
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #d7c4b6;
+  padding-left: 1rem;
+}
+
+.testimonials footer {
+  margin-top: 0.5rem;
+  font-weight: 700;
+  font-style: normal;
+  color: #7a5c4f;
+}
+
+/* Footer */
+footer {
+  background: #f9f4f0;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #7a5c4f;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.social-links a {
+  color: #7a5c4f;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+  color: #b07a5c;
+  outline: none;
+}
+
+.social-links svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .slogan {
+    font-size: 1.4rem;
+    padding: 0 1rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
